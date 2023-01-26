@@ -40,11 +40,11 @@ const App = () => {
   return (
     <div id="main">
       <select name="" id="" onChange={showMovies}>
-        <option value=""></option>
+        <option value={null} selected></option>
          {Object.keys(data).map((year) => <option key={year} value={year}>{year}</option>)}
       </select>
-      <div className='card'>
-        {movies == "" ? "No Year Selected" : <span>Selected year-{year}</span>}
+      <div id='selected-year'>
+        {movies == "" ? "No year selected" : <span>Selected year-{year}</span>}
         <ul>
         {movies.map(movie => {
           return <li key={movie}>{movie}</li>;
